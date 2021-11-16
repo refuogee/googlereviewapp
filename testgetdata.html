@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    console.log('testin');
+    
+   	 
+        fetch('/hptgooglereview/sendReviewData.php')
+	    .then(data => data.text())
+	    .then(data => {        
+            //console.log(data);
+            var obj = JSON.parse(data);
+            
+            //console.log( obj[0]['reviewer_name'] );
+            
+            var size = Object.keys(obj).length;
+            
+            for (var i=0; i<size; i++) {
+                console.log( obj[i] );
+            }
+
+            //console.log( size ); 
+
+
+	    });
+
+       
+       
+       
+        
+    
+</script>
+<body>
+    
+</body>
+</html>

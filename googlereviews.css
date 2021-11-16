@@ -1,0 +1,270 @@
+html {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+p {
+    margin-top : 0.4rem;
+    margin-bottom : 0.4rem;
+}
+/* The initial container holding the flex container - don't necessarily need this */
+.ftmv-row-container {
+    height : auto;
+    width : 100%;
+    display : flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items : center;
+    justify-content: center;
+}
+/* The container which holds the summary card and the list of review cards */
+.ftmv-flex-container {
+    height : 75vh;
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* Making the container responsive by changing flex-direction to columns  */
+@media only screen and (max-width: 885px) {
+    .ftmv-flex-container {
+        min-width: 400px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+/* This is the summary card and it's associated children */
+.ftmv-flex-summary-container {
+    display: flex;            
+    flex-basis: 30%;
+    flex-direction: column;
+    padding : 2em 2em 1em 2em;
+    
+    
+}
+
+.ftmv-logo-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ftmv-logo-img {
+    width: 80%;
+    height : auto;
+    display: block;
+    margin : auto;
+}
+
+.ftmv-logo-container {
+    flex-basis: 30%;    
+}
+
+.ftmv-title-container {
+    flex-basis: 70%;            
+}
+.ftmv-title {
+    font-size : 1.8rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.ftmv-address-container {                        
+}
+.ftmv-address {
+    color:#A9A9A9;
+}
+
+.ftmv-review-summary-container {    
+    display: flex;            
+    align-items: flex-end;
+    padding-top : 0.5rem;
+    padding-bottom : 0.5rem;
+}
+
+.ftmv-overall-rating {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    color : #e7711b;
+    padding-right : 0.3rem;
+}
+.ftmv-star-rating, .ftmv-rating {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    color : #e7711b;
+}
+.ftmv-review-total {
+    font-size : 1rem;
+    color : #A9A9A9;
+}
+
+.ftmv-rating {
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    
+    background-clip: text;
+    color : transparent;
+    
+    background-image: linear-gradient(to right, #e7711b 70%, #C0C0C0 40%);
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+.ftmv-review-count-link a {
+    text-decoration: none;
+}
+.ftmv-review-count-text, .ftmv-review-count {
+    font-size : 1rem;
+    color : #A9A9A9;    
+}
+
+.ftmv-google-branding-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ftmv-google-branding-container-review {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+
+}
+
+.ftmv-google-logo-review {
+    width: 60px;    
+    padding-left : 0.4rem;
+}
+
+.ftmv-message-review {
+    font-weight: 500;
+    color : #909090;    
+}
+
+.ftmv-google-logo {
+    width: 60px;    
+    padding-left : 0.4rem;
+}
+
+.ftmv-message {
+    font-weight: 500;
+    color : #909090;    
+}
+
+/* This is the list of reviews container it's associated children */
+.ftmv-reviews-container {            
+    flex-basis: 70%;
+    
+    display: flex;    
+    flex-direction: column;        
+
+    
+    padding : 2em;
+
+    overflow-y: auto;
+    
+}
+.ftmv-card-container {
+    display: flex;    
+    flex-direction: column;        
+}
+.ftmv-review-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 100%;
+    padding-bottom : 1rem;
+}
+
+.ftmv-review-card:not(:first-child) {
+    margin-top : 1rem;    
+}
+
+
+.ftmv-review-image-container {
+    flex-basis: 5%;
+    align-self: flex-start;    
+}
+
+
+@media only screen and (max-width: 1010px) {
+    .ftmv-review-image-container {
+        flex-basis: 7%;        
+    }
+}
+
+
+@media only screen and (max-width: 885px) {
+    .ftmv-review-image-container {
+        flex-basis: 7%;        
+    }
+}
+
+
+
+@media only screen and (max-width: 620px) {
+    .ftmv-review-image-container {
+        flex-basis: 15%;        
+    }
+}
+
+.ftmv-review-image {    
+    width: 100%;
+    height : auto;
+    display: block;
+    margin : auto;
+}
+.ftmv-review-details-container {
+    flex-basis: 95%;
+    align-self: flex-start;   
+    
+    padding-left : 0.8rem;    
+    padding-right : 0.8rem;    
+}
+
+.ftmv-review-details-container p {
+    margin-top : 0rem;
+    margin-bottom : 0rem;    
+}
+
+.ftmv-reviewer-name {
+    color : #000;
+    font-size : 0.9rem;
+    font-weight: 600;
+}
+
+.ftmv-reviewer-name-container a {
+    text-decoration: none;
+}
+
+.ftmv-reviewer-name-container a:visited {
+    color : #000;
+}
+
+.ftmv-reviewer-stars--date-container {
+    display : flex;
+    flex-direction: row;
+    font-size : 0.9rem;
+    align-items: center;
+}
+.ftmv-reviewer-stars {
+    color : #e7711b;    
+}
+.ftmv-review-date {
+    margin-left : .4rem;
+    color : #A9A9A9;
+    text-transform: lowercase;
+    
+}
+
+.ftmv-review-text {
+    font-size : 0.9rem;
+    line-height: 1.1rem;
+}
+
